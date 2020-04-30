@@ -1,0 +1,24 @@
+<div class="container">
+        <head>
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         </head>
+           <div>
+              <h1 align="center">Questions Details Form</h1> <br>
+           </div>
+           
+        
+     <form #userForm="ngForm" (ngSubmit)="insertData()">
+        TestId : <input type="text" name="test_Id" [(ngModel)]="user.test_Id" required placeholder="Enter test Id"/><br><br><br>
+        TestName : <input type="text" name="test_Name" [(ngModel)]="user.test_Name" required placeholder="Enter the options as input"/><br><br><br>
+        Test_Total_Marks : <input type="number" name="test_Total_Marks" [(ngModel)]="user.test_Total_Marks" required placeholder="Enter the marks for test"/><br><br><br>
+        ID: <input type="number" name="question_Id" required [(ngModel)]="questions.question_Id" class="form-group"  placeholder="Enter Question ID"/><br><br><br>
+        Title : <input type="text" name="question_Title" [(ngModel)]="questions.question_Title" class="form-group" required placeholder="Enter Question Title here"/><br>
+       Options : <input type="text" name="question_Options" [(ngModel)]="questions.question_Options" required placeholder="Enter the options as input"/><br><br><br>
+        Answer : <input type="number" name="question_Answer" [(ngModel)]="questions.question_Answer" required placeholder="Enter the answer option"/><br><br><br>
+       Marks : <input type="number" name="question_Marks" [(ngModel)]="questions.question_Marks" required placeholder="Enter marks for this question"/><br><br><br>
+
+          <!------ <input type="button" value="create new Question" (click)="insertData()" class="btn btn-success"/>--->
+       <input [disabled]="userForm.invalid" type="submit" value="Add Employee" class="btn btn-success">
+
+      </form>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <table class="table" *ngIf = "questions && questions.length > 0  else elseBlock">
+        <thead>
+            <tr>
+                <th>Question Id</th>
+                <th>Question :</th>
+                <th>Question Options</th>
+                <th>Question Answer</th>
+                <th>Question Marks</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let question of questions">
+            <td> {{question.question_Id}} </td>
+            <td> {{question.question_Title}} </td>
+            <td> {{question.question_Options}} </td>
+            <td> {{question.question_Answer}} </td>
+            <td> {{question.question_Marks}} </td>
+            <td> 
+            <button type="button" class="btn btn-large btn-block btn-primary" (click) = onDelete(questions) >Delete</button>
+            </td>
+            <td>
+             <button type="button" class="btn btn-large btn-block btn-primary" (click) = onUpdate(questions)>Edit</button></td>
+            <td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #elseBlock>
+        <h4 align = "center"> No more questions, please add the questions! </h4>
+    </ng-template>
+        
+</div>

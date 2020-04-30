@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "OnlineTestManagementSystem"
+    }
+  },
+  "defaultProject": "OnlineTestManagementSystem",
+  "cli": {
+    "analytics": "23b488a0-0267-439a-b455-40d556b24180"
+  }
 }

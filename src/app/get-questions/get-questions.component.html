@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .class{
+            color: blue;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<div class="row justify-content-center align-items-center h-100 a">
+    <input type="text" name="question_Id" [(ngModel)]="question_Id" placeholder="Enter Question ID" class="form-group">    
+    <br>
+  <input type="button" value="fetch details" (click)="fetchQuestion()" class="btn btn-primary" class="form-group"/>
+</div>
+<br>
+<div>
+<table class="table"  align="center">
+    <thead>
+        <tr>
+            <th>Question Id</th>
+            <th>Question :</th>
+            <th>Question Options</th>
+            <th>Question Answer</th>
+            <th>Question Marks</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+     <!------- <tr *ngFor = "let question of questions">--->
+    <tr>
+        <td> {{question.question_Id}} </td>
+        <td> {{question.question_Title}} </td>
+        <td> {{question.question_Options}} </td>
+        <td> {{question.question_Answer}} </td>
+        <td> {{question.question_Marks}} </td>
+        <td> 
+        </td>
+        </tr>
+
+        </table>
+    </div>
+        
